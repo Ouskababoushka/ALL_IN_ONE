@@ -45,6 +45,7 @@ class ResultItemsController < ApplicationController
   private
 
   def result_item_params
-    params.require(:result_item).permit(:title, :description, :price, :image_url, :posted_at)
+    params.require(:result_item).permit(:title, :description, :price, :image_url, :item_type,
+                                        :posted_at, :city, :currency, :hosted_url, :hosted_website)
   end
 end
