@@ -1,4 +1,6 @@
 class ResultItemsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
+
   def index
     @result_items = ResultItem.all
   end
