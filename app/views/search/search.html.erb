@@ -1,0 +1,9 @@
+<% @result_items.each do |result| %>
+  <div>
+    <h3><%= result[:title] %></h3>
+    <p><%= result[:description] %></p>
+    <p><strong>Price:</strong> <%= result[:price] %></p>
+    <a href="<%= result[:url] %>">View on <%= result[:website] %></a>
+  </div>
+  <% raise %>
+<% end %>

@@ -3,6 +3,12 @@
     <%= link_to "#", class: "navbar-brand" do %>
       <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
     <% end %>
+    <div class="relative mx-auto w-64">
+      <%= simple_form_for :search, url: search_path, method: :post do |f| %>
+        <%= f.input :query, label: false, placeholder: "Search...", input_html: { class: "block w-full py-2 px-3 rounded-lg border-gray-300 focus:border-blue-500 focus:outline-none focus:shadow-outline-blue" } %>
+        <%= f.submit "Search", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+      <% end %>
+    </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

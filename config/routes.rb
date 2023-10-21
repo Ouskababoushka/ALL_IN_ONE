@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :result_items
 
+  post '/search', to: 'search#search', as: 'search'
+
 end
